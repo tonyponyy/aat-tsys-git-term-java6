@@ -12,7 +12,7 @@ public class ejercicio7 {
 			if (sc.hasNextInt()) {
 				int moneda = sc.nextInt();
 				if (moneda == 1 || moneda == 2 || moneda == 3) {
-					System.out.println(numero + "€ son:" + cambio_divisa(numero, moneda));
+					cambio_divisa(numero, moneda);
 				} else {
 					System.out.println("No ha ingresado un número entero válido.");
 				}
@@ -27,7 +27,7 @@ public class ejercicio7 {
 
 	}
 
-	private static String cambio_divisa(int n, int m) {
+	private static void cambio_divisa(int n, int m) {
 		String resultado = "";
 		switch (m) {
 		case 1:
@@ -40,7 +40,7 @@ public class ejercicio7 {
 			resultado = (n * 129.852) + " Yenes";
 			break;
 		}
-		return resultado;
+		System.out.println(n + "€ son:" + resultado);
 
 	}
 
